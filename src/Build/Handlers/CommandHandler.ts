@@ -8,17 +8,16 @@ import { glob } from "glob";
 import path from "path";
 let gb = promisify(glob);
 
+
 export async function CommandHandler(client: MusicClient) {
   client.commands.clear();
   client.prefixCommands.clear();
 
   let commandFiles = await gb(
-    path.join(process.cwd(), "src", "SlashCommands", "**/*{.ts,.js}").replace(/\\/g, "/")
+    path.join(__dirname, "..", "..", "SlashCommands", "**/*{.ts,.js}").replace(/\\/g, "/")
   );
   let legacyCommandFiles = await gb(
-    path
-      .join(process.cwd(), "src", "LegacyCommands", "**/*{.ts,.js}")
-      .replace(/\\/g, "/")
+    path.join(__dirname, "..", "..", "Legacy", "**/*{.ts,.js}").replace(/\\/g, "/")
   );
   let cmds = [];
 

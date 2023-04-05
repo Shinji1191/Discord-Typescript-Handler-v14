@@ -1,4 +1,4 @@
-import { greenBright, redBright, yellowBright } from "colorette";
+import { greenBright, redBright } from "colorette";
 import { botConfig } from "../../Build/Configurations/botConfig";
 import { EventClass } from "../../Build/Classes/EventClass";
 import mongoose from "mongoose";

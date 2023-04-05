@@ -163,3 +163,5 @@ export default new EventClass({
 - For help join my Discord Server [Shen's Coding Den]("https://discord.gg/vCnMwEWbFg") and ask for help in the help channels.
 
 - If there are errors in the handler please DM me in discord as well.
+
+- I also suggest sticking to ytdl-core version 4.9.1 as the latest version is having errors getting the song and playing it on the voice channel

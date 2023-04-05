@@ -7,6 +7,7 @@ import { EventHandler } from "./Handlers/EventHandler";
 import { CommandType } from "./Types/CommandType";
 import Player from "./Client/Player";
 import mongoose from "mongoose";
+import PlayerEvents from "./Handlers/PlayerEvents";
 
 export class MusicClient extends Client {
   prefixCommands = new Collection<string, LegacyCommandType>()
@@ -57,7 +58,6 @@ export class MusicClient extends Client {
     this.login(botConfig.token);
     CommandHandler(this)
     EventHandler(this)
-
-    
+    PlayerEvents(this) 
   }
 }

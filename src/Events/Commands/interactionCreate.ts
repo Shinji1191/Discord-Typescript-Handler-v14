@@ -54,7 +54,11 @@ export default new EventClass({
         ]
       })
 
-      command.execute({ client, args: interaction.options as CommandInteractionOptionResolver, interaction: interaction as ExtendedInteraction })
+      try {
+        command.execute({ client, args: interaction.options as CommandInteractionOptionResolver, interaction: interaction as ExtendedInteraction })
+      } catch (error) {
+        return
+      }
     }
   },
 });

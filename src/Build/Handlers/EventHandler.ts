@@ -8,7 +8,7 @@ let gb = promisify(glob);
 
 export async function EventHandler(client: MusicClient) {
   let eventFiles = await gb(
-    path.join(process.cwd(), "src" ,"Events", "**/*{.ts,.js}").replace(/\\/g, "/")
+    path.join(__dirname, "..", "..","Events", "**/*{.ts,.js}").replace(/\\/g, "/")
   );
 
   eventFiles.forEach(async (file) => {
